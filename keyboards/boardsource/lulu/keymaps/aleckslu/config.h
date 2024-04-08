@@ -3,13 +3,13 @@
 
 // to stop the need to replug keyboard every restart
 // ! will not be able to enter bios with this method
-// #define SPLIT_USB_TIMEOUT 10000
-// #define SPLIT_USB_TIMEOUT_POLL 10 
+#define SPLIT_USB_TIMEOUT 10000
+#define SPLIT_USB_TIMEOUT_POLL 10 
 
 // Since Splinky RP2040 has working VBUS detect on pin GP19, a better fix IMO would be the following code, which forces QMK to use VBUS (USB voltage) detection, which is much faster than SPLIT_USB_DETECT.
 // * able to enter bios with this method
-#undef SPLIT_USB_DETECT
-#define USB_VBUS_PIN GP19 
+// #undef SPLIT_USB_DETECT
+// #define USB_VBUS_PIN GP19 
 
 /* 
 ? Note
@@ -23,7 +23,7 @@ With this method, you will be able to enter bios with the kb. However this metho
 
 // Handedness https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 
-#undef RGBLIGHT_ANIMATIONS
+// #undef RGBLIGHT_ANIMATIONS
 #undef RGBLIGHT_EFFECT_BREATHING
 #undef RGBLIGHT_EFFECT_RAINBOW_MOOD
 #undef RGBLIGHT_EFFECT_RAINBOW_SWIRL
