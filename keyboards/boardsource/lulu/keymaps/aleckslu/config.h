@@ -17,7 +17,7 @@ With this method, you will be able to enter bios with the kb. However this metho
 */
 
 #define TAPPING_TERM 170
-#define BOTH_SHIFTS_TURN_ON_CAPS_WORD
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define HOLD_ON_OTHER_KEY_PRESS
 #define RETRO_TAPPING
 
