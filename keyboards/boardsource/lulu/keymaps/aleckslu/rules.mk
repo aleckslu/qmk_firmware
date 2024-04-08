@@ -1,3 +1,5 @@
 # This file intentionally left blank
-SPLIT_KEYBOARD = yes
-LEADER_ENABLE = yes
+# LEADER_ENABLE = yes
+CAPS_WORD_ENABLE = yes
+DYNAMIC_TAPPING_TERM_ENABLE = yes
+RGBLIGHT_ENABLE = yes
