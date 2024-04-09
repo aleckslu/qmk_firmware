@@ -3,7 +3,7 @@
 
 // to stop the need to replug keyboard every restart
 // ! will not be able to enter bios with this method
-#define SPLIT_USB_TIMEOUT 10000
+#define SPLIT_USB_TIMEOUT 5000
 #define SPLIT_USB_TIMEOUT_POLL 10 
 
 // Since Splinky RP2040 has working VBUS detect on pin GP19, a better fix IMO would be the following code, which forces QMK to use VBUS (USB voltage) detection, which is much faster than SPLIT_USB_DETECT.
