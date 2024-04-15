@@ -47,7 +47,7 @@
             "KC_V",
             "KC_B",
             "KC_F13",
-            "TT(_NUMS)",
+            "TT(_ADJUST)",
             "KC_N",
             "KC_M",
             "KC_COMM",
@@ -57,9 +57,9 @@
             "KC_LGUI",
             "KC_LSFT",
             "KC_SPC",
-            "MO(_FUNCS)",
+            "MO(_RAISE)",
             "KC_ENT",
-            "MO(_SYMBOL)",
+            "MO(_LOWER)",
             "RSFT_T(KC_BSPC)",
             "KC_DEL"
         ],
@@ -119,8 +119,8 @@
             "KC_TRNS",
             "KC_TRNS",
             "KC_TRNS",
-            "MO(_NUMS)",
             "KC_TRNS",
+            "KC_BSPC",
             "KC_TRNS"
         ],
         [
@@ -167,7 +167,7 @@
             "KC_AT",
             "KC_ASTR",
             "KC_TRNS",
-            "KC_NO",
+            "KC_TRNS",
             "KC_NO",
             "KC_AMPR",
             "KC_LABK",
@@ -177,10 +177,10 @@
             "KC_TRNS",
             "KC_TRNS",
             "KC_TRNS",
-            "MO(_NUMS)",
             "KC_TRNS",
             "KC_TRNS",
             "KC_TRNS",
+            "KC_BSPC",
             "KC_TRNS"
         ],
         [
@@ -240,7 +240,7 @@
             "KC_TRNS",
             "KC_PENT",
             "KC_TRNS",
-            "KC_TRNS",
+            "KC_BSPC",
             "KC_TRNS"
         ]
     ]
