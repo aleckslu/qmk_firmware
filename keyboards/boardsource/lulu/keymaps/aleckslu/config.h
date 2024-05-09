@@ -12,22 +12,23 @@
 // #undef SPLIT_USB_DETECT
 // #define USB_VBUS_PIN GP19 
 
-#define TAPPING_TOGGLE 2
-
 /* 
 ? Note
 With this method, you will be able to enter bios with the kb. However this method requires the firmware to be coded natively for RP2040 controller. Compiling firmware coded natively for ATmega32U4 with 'CONVERT_TO=promicro_rp2040' flag won't work because GP19 isn't valid pin for ATmega32U4. 
 */
 
-// #undef TAPPING_TERM
-// #define TAPPING_TERM 200
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
+
+#define TAPPING_TOGGLE 2
 
 // Disables double tap repeat
 #define QUICK_TAP_TERM 0
 
-#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+// #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS
 // #define RETRO_TAPPING
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 // Handedness https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness
 
