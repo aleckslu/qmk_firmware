@@ -17,6 +17,7 @@
 #define ENT_EXTRA LT(4,KC_ENT)
 #define MT_C_ESC LCTL_T(KC_ESC)
 #define MT_S_BS RSFT_T(KC_BSPC)
+#define GAMING TT(5)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
@@ -27,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
       MT_C_ESC,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                               KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_F16,
 //  |----------+---------+---------+---------+---------+---------+----------.   .----------+---------+---------+---------+---------+---------+---------|
-      KC_LALT,   KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_F13,        KC_F13,   KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_F17,
+      KC_LALT,   KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_F13,        GAMING,   KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_F17,
 //  '----------'---------'--.------'---.-----'----.----'-----.---'----------|   |----------'---.-----'----.----'-----.---'------.--'---------'---------'
                               KC_LGUI,   KC_LSFT,   KC_SPC,        FUNCS,         ENT_EXTRA,        SYMS,    MT_S_BS,   KC_DEL
 //                          '----------+----------+----------+--------------'   '--------------+----------+----------+----------'
@@ -43,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |----------+---------+---------+---------+---------+---------+----------.   .----------+---------+---------+---------+---------+---------+---------|
       XXXXXXX,   C(KC_Z),  C(KC_X),  C(KC_C),  C(KC_V),  XXXXXXX,  _______,       _______,   KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   XXXXXXX,  A(KC_F21),
 //  '----------'---------'---------'---------'---------'---------'----------|   |----------'---------'---------'---------'---------'---------'---------'
-                              XXXXXXX,   XXXXXXX,   _______,       _______,       KC_ENT,       NUMS,   KC_BSPC,   _______
+                              XXXXXXX,   XXXXXXX,   _______,       _______,       KC_ENT,        NUMS,      KC_BSPC,   _______
 //                          '----------+----------+----------+--------------'   '--------------+----------+----------+----------'
 
 ),
@@ -53,11 +54,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
       _______,   KC_BSLS,  KC_LPRN,  KC_UNDS,  KC_RPRN,  KC_PERC,                            _______,  KC_EQUAL, KC_LBRC,  KC_RBRC,  KC_PIPE,  XXXXXXX,
 //  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
-      _______,   KC_GRV,   KC_LCBR,  KC_DQT,  KC_RCBR,  KC_TILD,                             KC_CIRC,  KC_PLUS,  KC_MINS,  KC_DLR,   KC_QUOT,  XXXXXXX,
+      _______,   KC_QUOT,   KC_LCBR,  KC_DQT,  KC_RCBR,  KC_TILD,                             KC_CIRC,  KC_PLUS,  KC_MINS,  KC_DLR,   KC_GRV,  XXXXXXX,
 //  |----------+---------+---------+---------+---------+---------+----------.   .----------+---------+---------+---------+---------+---------+---------|
       _______,   KC_AT,    KC_HASH,  KC_EXLM,  KC_ASTR,  KC_AT,    _______,       _______,   XXXXXXX,  KC_AMPR,  KC_LABK,  KC_RABK,  KC_QUES,  XXXXXXX,
 //  '----------'---------'---------'---------'---------'---------'----------|   |----------'---------'---------'---------'---------'---------'---------'
-                              _______,   KC_QUOT,   _______,       NUMS,          KC_ENT,       _______,   KC_BSPC,   _______
+                              _______,   KC_QUOT,   KC_QUOT,        NUMS,          KC_ENT,       _______,   KC_BSPC,   _______
 //                          '----------+----------+----------+--------------'   '--------------+----------+----------+----------'
 
 ),
@@ -77,15 +78,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 [4] = LAYOUT(
 //  .----------.---------.---------.---------.---------.---------.          EXTRA          .---------.---------.---------.---------.---------.---------.
-      XXXXXXX,    XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   XXXXXXX,  XXXXXXX,
+      XXXXXXX,   XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                          XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   XXXXXXX,  XXXXXXX,
 //  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
-      XXXXXXX,   C(KC_Z),  C(KC_X),  C(KC_C),  C(KC_V),  XXXXXXX,                            XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+      KC_MSEL,   XXXXXXX,  KC_VOLU,  KC_VOLU,  XXXXXXX,  XXXXXXX,                            XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
 //  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
-      KC_ESC,    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                            XXXXXXX,  KC_RSFT,  KC_RCTL,  KC_RALT, KC_RGUI,   XXXXXXX,
+      KC_ESC,    KC_MRWD,  KC_MPRV,  KC_VOLD,  KC_MNXT,  KC_MFFD,                            XXXXXXX,  KC_RSFT,  KC_RCTL,  KC_RALT, KC_RGUI,   XXXXXXX,
 //  |----------+---------+---------+---------+---------+---------+----------.   .----------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,       _______,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+      XXXXXXX,   C(KC_Z),  C(KC_X),  C(KC_C),  C(KC_V),  C(KC_Y),  _______,       _______,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
 //  '----------'---------'---------'---------'---------'---------'----------|   |----------'---------'---------'---------'---------'---------'---------'
-                              XXXXXXX,   XXXXXXX,   XXXXXXX,       XXXXXXX,       _______,       XXXXXXX,   XXXXXXX,   XXXXXXX
+                              XXXXXXX,   KC_MSTP,   KC_MPLY,       XXXXXXX,       _______,       XXXXXXX,   XXXXXXX,   XXXXXXX
+//                          '----------+----------+----------+--------------'   '--------------+----------+----------+----------'
+
+),
+[5] = LAYOUT(
+//  .----------.---------.---------.---------.---------.---------.        GAMING           .---------.---------.---------.---------.---------.---------.
+      KC_ESC,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,                               KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_GRV,
+//  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
+      KC_TAB,    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                               KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_PMNS,
+//  |----------+---------+---------+---------+---------+---------|                         |---------+---------+---------+---------+---------+---------|
+      KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                               KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_F16,
+//  |----------+---------+---------+---------+---------+---------+----------.   .----------+---------+---------+---------+---------+---------+---------|
+      KC_LTCL,   KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_F1,        _______,   KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_LGUI,
+//  '----------'---------'--.------'---.-----'----.----'-----.---'----------|   |----------'---.-----'----.----'-----.---'------.--'---------'---------'
+                              KC_LALT,   KC_LSFT,   KC_SPC,        FUNCS,         KC_ENT,        SYMS,    KC_BSPC,      KC_DEL
 //                          '----------+----------+----------+--------------'   '--------------+----------+----------+----------'
 
 )};
